@@ -1,10 +1,27 @@
 import { Component } from '@angular/core';
-
+import { Router } from "@angular/router";
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'fit';
+  title = 'Fitness';
+  constructor(private router: Router) { }
+  dataset = ['Jason Smith(M)', 'Anne Roger(F)', 'Elly Jones(F)', 'Jon Snow(M)', 'Rob Stak(M)', 'Siri Davis(F)', 'Ed Miller(M)'];
+  landingpage() {
+    this.router.navigateByUrl("landing-page");
+  }
+  placeAppointment() {
+    this.router.navigateByUrl("place-fitness-trainer-appointment");
+  }
+  viewAppointment() {
+    this.router.navigateByUrl("view-appointment");
+  }
+  contactUspage() {
+    this.router.navigateByUrl("contact-us");
+  }
+
+  navpage() {
+    this.router.navigateByUrl("place-gift-card-order-page");
+  }
 }

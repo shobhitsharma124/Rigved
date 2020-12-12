@@ -1,0 +1,37 @@
+<table class="table table-bordered">
+    <thead class="black white-text">
+      <tr>
+          <th>Sr No.</th>
+       <th>First Name</th>
+       <th>Last name</th>
+       <th>City</th>
+       <th>Package</th>
+       <th>Trainer Preference</th>
+       <th>Phone</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let el of app; let i = index">
+          <td>{{i+1}}</td>
+        <td>{{el.firstName}}</td>
+        <td>{{el.lastName}}</td>
+        <td>{{el.city}}</td>
+        <td>{{el.packages}}</td>
+        <td>{{el.trainerpreference}}</td>
+        <td>{{el.phone}}</td>
+      </tr>
+    </tbody>
+</table>
+    
+
+
+
+
+
+
+
+
+
+
+
